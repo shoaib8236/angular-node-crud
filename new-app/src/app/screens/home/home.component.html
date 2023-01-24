@@ -1,0 +1,20 @@
+<div class="user_actions">
+    <h1>Users</h1>
+    <div>
+        <button (click)="onDeleteUser()" mat-fab color="primary" *ngIf="userIds.length > 0">
+            <mat-icon>delete</mat-icon></button>
+        <button (click)="onAddUser()" mat-fab color="primary" *ngIf="userIds.length === 0">
+            <mat-icon>add</mat-icon></button>
+    </div>
+</div>
+
+<div *ngIf="!usersSuccess" class="loader">
+    <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="usersSuccess" class="users_containers">
+    <div *ngFor="let user of users" class="user_card_wrapper">
+        <app-users (updateUsers)="onUpdate($event)" (userObj)="onChecked($event)" [data]="user"></app-users>
+    </div>
+
+</div>

@@ -1,0 +1,46 @@
+@import "../../styles/variable";
+
+.users_wrapper {
+  box-shadow: $shadow;
+  padding: 15px;
+  border-radius: 4px;
+  transition: 0.3s;
+  position: relative;
+
+  &:hover {
+    transform: scale(1.02);
+    background-color: #fff;
+  }
+
+  .stick_right_top {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+  }
+
+  .stick_right_bottom {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+  }
+
+  .user_profile {
+    display: flex;
+
+    .short_details {
+      margin-left: 10px;
+
+      .user_name {
+        font-size: 16px;
+        color: $text-color;
+      }
+      .user_post {
+        font-size: 14px;
+        color: $text-color;
+        line-height: 2;
+      }
+    }
+  }
+}

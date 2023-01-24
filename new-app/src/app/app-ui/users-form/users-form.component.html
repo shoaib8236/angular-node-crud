@@ -1,0 +1,16 @@
+<div class="mat_dialog_wrapper">
+    <h1 *ngIf="data.name" class="user_name">{{data.name}}</h1>
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)" class="form_wrapper">
+        <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input formControlName="name" [value]="data.name" required matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Company</mat-label>
+            <input formControlName="company" matInput>
+        </mat-form-field>
+        <div class="submit_section">
+            <button [disabled]="!myForm.valid" mat-raised-button color="primary">Update</button>
+        </div>
+    </form>
+</div>

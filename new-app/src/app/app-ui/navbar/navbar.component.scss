@@ -1,0 +1,30 @@
+.nav_wrapper {
+  width: 100%;
+
+  .nav_main {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    background-color: #4064ac;
+
+    .logo {
+      min-width: 100px;
+      color: #fff;
+      font-size: 22px;
+      font-weight: 600;
+    }
+    .nav_links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+      a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        margin: 0 10px;
+        line-height: 1;
+      }
+    }
+  }
+}

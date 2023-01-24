@@ -1,0 +1,18 @@
+<div class="users_wrapper">
+
+    <div class="stick_right_top">
+        <button (click)="openDialog(data)" mat-icon-button color="primary">
+            <mat-icon>edit</mat-icon>
+        </button>
+        <mat-checkbox [value]="data._id" (change)="onGetId($event)"></mat-checkbox>
+    </div>
+    <div class="stick_right_bottom">
+    </div>
+    <div class="user_profile">
+        <app-avatar [image]="data.image"></app-avatar>
+        <div class="short_details">
+            <h3 class="user_name">{{data.name}}</h3>
+            <p class="user_post">{{data.company}}</p>
+        </div>
+    </div>
+</div>
